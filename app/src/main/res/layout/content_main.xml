@@ -25,6 +25,7 @@
         android:id="@+id/button2"
         android:layout_width="144dp"
         android:layout_height="71dp"
+        android:onClick="on_button_click"
         android:text="Roll Dice"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
