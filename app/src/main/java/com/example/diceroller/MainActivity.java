@@ -99,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView) this.findViewById(R.id.textView);
         int number = Integer.valueOf(tv.getText().toString());
 
+        ArrayList<String> arrayQuestions = getStringArrayList();
+
+        TextView questionBox = (TextView) this.findViewById(R.id.questionBox);
+        questionBox.setText(arrayQuestions.get(number));
+    }
+
+    private ArrayList<String> getStringArrayList() {
         ArrayList <String> arrayQuestions = new ArrayList();
         arrayQuestions.add("This will never be chosen because indexing starts at 0");
         arrayQuestions.add("If you could go anywhere in the world, where would you go?");
@@ -107,9 +114,7 @@ public class MainActivity extends AppCompatActivity {
         arrayQuestions.add("If you won a million dollars, what is the first thing you would buy?");
         arrayQuestions.add("If you could spaned the day with one fictional character, who would it be?");
         arrayQuestions.add("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
-
-        TextView questionBox = (TextView) this.findViewById(R.id.questionBox);
-        questionBox.setText(arrayQuestions.get(number));
+        return arrayQuestions;
     }
 
 
